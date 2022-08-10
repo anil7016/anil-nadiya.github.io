@@ -1,15 +1,15 @@
 {
-  "main.css": "/anil7016/anil7016.github.io.git/static/css/main.7af8df8a.chunk.css",
-  "main.js": "/anil7016/anil7016.github.io.git/static/js/main.ad3409bd.chunk.js",
-  "main.js.map": "/anil7016/anil7016.github.io.git/static/js/main.ad3409bd.chunk.js.map",
-  "static/css/1.9fdc480c.chunk.css": "/anil7016/anil7016.github.io.git/static/css/1.9fdc480c.chunk.css",
-  "static/js/1.4a48fab1.chunk.js": "/anil7016/anil7016.github.io.git/static/js/1.4a48fab1.chunk.js",
-  "static/js/1.4a48fab1.chunk.js.map": "/anil7016/anil7016.github.io.git/static/js/1.4a48fab1.chunk.js.map",
-  "runtime~main.js": "/anil7016/anil7016.github.io.git/static/js/runtime~main.f73c966e.js",
-  "runtime~main.js.map": "/anil7016/anil7016.github.io.git/static/js/runtime~main.f73c966e.js.map",
-  "static/css/main.7af8df8a.chunk.css.map": "/anil7016/anil7016.github.io.git/static/css/main.7af8df8a.chunk.css.map",
-  "static/css/1.9fdc480c.chunk.css.map": "/anil7016/anil7016.github.io.git/static/css/1.9fdc480c.chunk.css.map",
-  "index.html": "/anil7016/anil7016.github.io.git/index.html",
-  "precache-manifest.71a0fd651b1d9f4a7229dbcf75bd9c88.js": "/anil7016/anil7016.github.io.git/precache-manifest.71a0fd651b1d9f4a7229dbcf75bd9c88.js",
-  "service-worker.js": "/anil7016/anil7016.github.io.git/service-worker.js"
+  "main.css": "/static/css/main.7af8df8a.chunk.css",
+  "main.js": "/static/js/main.ad3409bd.chunk.js",
+  "main.js.map": "/static/js/main.ad3409bd.chunk.js.map",
+  "static/css/1.9fdc480c.chunk.css": "/static/css/1.9fdc480c.chunk.css",
+  "static/js/1.4a48fab1.chunk.js": "/static/js/1.4a48fab1.chunk.js",
+  "static/js/1.4a48fab1.chunk.js.map": "/static/js/1.4a48fab1.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/main.7af8df8a.chunk.css.map": "/static/css/main.7af8df8a.chunk.css.map",
+  "static/css/1.9fdc480c.chunk.css.map": "/static/css/1.9fdc480c.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.7d4283525198b6f9214c5b9fdc46ff85.js": "/precache-manifest.7d4283525198b6f9214c5b9fdc46ff85.js",
+  "service-worker.js": "/service-worker.js"
 }
