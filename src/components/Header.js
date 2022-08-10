@@ -21,15 +21,22 @@ const Header = () => {
                     </Container>
                 </Navbar>
             </div>
-            <div>
+            <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <ul className="d-flex">
+                <ul className="navbar-nav">
                     <li className="p-1">
                     <Link to="/">Home</Link>
                     </li>
                     <li className="p-1">
                     <Link to="/about">About</Link>
                     </li>
+                    <li className="p-1">
+                    <Link to="/portfolio">Portfolio</Link>
+                    </li>
+                    <li className="p-1">
+                    <Link to="/contact">Contact Us</Link>
+                    </li>
+
                 </ul>
                 </nav>
             </div>
