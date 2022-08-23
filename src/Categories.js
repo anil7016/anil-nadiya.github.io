@@ -4,7 +4,7 @@ const Categories = ({categories, filterItems, selCategory}) => {
     return(
         <div className="btn-container">
             { categories.map((category, index) => {
-                var activeClr = (category == selCategory) ? 'black' : '';
+                var activeClr = (category === selCategory) ? 'black' : '';
                 return  (
                     <button 
                         type="button"

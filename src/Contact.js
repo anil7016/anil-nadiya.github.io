@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import axios from 'axios';
+// import axios from 'axios';
 
 const API_PATH = 'http://localhost:890/nodejs/react-app/api/contact.php';
 
@@ -51,7 +51,8 @@ const Contact = () => {
 
 
     return(
-        <div className="section container">
+        <div className="section">
+          <div className='col-sm-6'>
             <Form onSubmit={onSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
@@ -66,11 +67,11 @@ const Contact = () => {
                     We'll never share your email with anyone else.
                     </Form.Text>
                 </Form.Group>
-
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
+          </div>  
         </div>    
     )
 }

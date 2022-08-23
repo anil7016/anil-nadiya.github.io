@@ -1,11 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import userService from './services/user.service';
 
-const About = () => {
+const Home = () => {
+    const [content, setContent] = useState('');
+    console.log('content', content)
+    useEffect(()=> {
+        userService.getPublicContent().then(
+            (response) => {
+                setContent(response.data)
+            },
+            (error) => {
+                const _content = 
+                    (error.response && error.response.data) ||
+                    error.message || error.toString();
+                setContent(_content);
+            }
+        )
+    }, [])
     return(
         <div className="container">
             <div className="row content-justify">
                 <div>
-                    <h2 className="text-center">About Us</h2>
+                    <h2 className="text-center"> Home {content}</h2>
                 </div>
                 <div>
                     <p>
@@ -24,4 +40,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default Home;

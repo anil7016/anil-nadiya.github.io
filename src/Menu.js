@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
 import Categories from './Categories';
 import items from './data';
 
-const allcategories = ['all', ... new Set( items.map((item) => item.category )) ]
+const allcategories = ['all',...new Set( items.map((item) => item.category )) ]
 console.log('allcategories', allcategories)
 let selectCategory = 'all';
 
@@ -11,7 +12,7 @@ const Menu = ( {items} ) => {
     const [menuItems, setMenuItems] = useState(items);
     console.log('menuItems', menuItems)
     //console.log('setMenuItems', setMenuItems)
-    const [categories, setCategories] = useState(allcategories);
+    const [categories] = useState(allcategories);
   
     const filterItems = (category) => {
       selectCategory = category;
@@ -33,10 +34,10 @@ const Menu = ( {items} ) => {
                     const { id, title, img,desc, price } = menuItem;
                     return (
                         <article key={id} className="menu-item">
-                            <img src={img}  className="photo"/>
+                            <img src={img}  className="photo" alt="img" />
                             <div className="item-info">
                                 <header>
-                                    <h4>{title}</h4>
+                                <Link to={`/portfolio/${id}`} ><h4 > {title} </h4></Link>
                                     <h4 className="price">${price}</h4>
                                 </header>
                                 <p className='item-text'>{desc}</p>

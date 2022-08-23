@@ -1,77 +1,46 @@
 import React, {useState} from 'react';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import Categories from './Categories';
 import Contact from './Contact';
 import Header from './components/Header';
 import About from './About';
 import Menu from './Menu';
+import Blog from './Blog';
 import items from './data';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
-
-const allcategories = ['all', ... new Set( items.map((item) => item.category )) ]
-//console.log('allcategories', allcategories)
-let selectCategory = 'all';
+import Home from './Home';
+import Portfoliodetail from './Portfoliodetail';
 
 function App() {
-  const [menuItems, setMenuItems] = useState(items);
-  const [categories, setCategories] = useState(allcategories);
-
-  const filterItems = (category) => {
-    selectCategory = category;
-    if(category === 'all'){
-      setMenuItems(items);
-      return
-    }  
-    const newItem = items.filter((item) => item.category===category );  
-      setMenuItems(newItem)
-  }
+  const [menuItems] = useState(items);
   
   return (
-
-    // <main>
-    //   <section className="menu section container">
-    //     <div className="title">
-    //       <h2>TMS</h2>
-    //       <div className="underline"></div>
-    //     </div>
-    //     <Categories categories={categories} filterItems={filterItems} selCategory={selectCategory} />
-    //     <Menu items={menuItems} />
-    //   </section>
-    // </main>
-
-    <Router>
+    <BrowserRouter>
       <div>
         <Header />
-        
         <div className="container" style={{'minHeight':'500px'}}>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/portfolio">
-            <Menu items={menuItems} />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          
-          <Route path="/">
-            {/* <Categories categories={categories} filterItems={filterItems} selCategory={selectCategory} /> */}
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/portfolio/:idtest"  >
+              <Portfoliodetail />
+            </Route>
+            <Route path="/portfolio" >
+              <Menu items={menuItems} />
+            </Route>
+            <Route path="/blog" component={Blog} />
+            <Route component={Contact} path="/contact" />
+            <Route component={Home} path="/" exact />
+          </Switch>
         </div>
-
         <Footer />
     </div>
-  </Router>  
+  </BrowserRouter>  
 
   );
 }
