@@ -1,4 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+//import React, {useState} from 'react';
 import {
   BrowserRouter,
   Switch,
@@ -11,11 +15,18 @@ import Menu from './Menu';
 import Blog from './Blog';
 import items from './data';
 import Footer from './components/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import './App.css';
+import Login from './components/Login';
+import Profile from './components/Profile';
 import Home from './Home';
 import Portfoliodetail from './Portfoliodetail';
+
+
+
+// css
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Register from "./components/Register";
+
 
 function App() {
   const [menuItems] = useState(items);
@@ -33,7 +44,11 @@ function App() {
             <Route path="/portfolio" >
               <Menu items={menuItems} />
             </Route>
+
             <Route path="/blog" component={Blog} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route component={Profile} path="/profile" />
             <Route component={Contact} path="/contact" />
             <Route component={Home} path="/" exact />
           </Switch>

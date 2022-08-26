@@ -1,8 +1,8 @@
-import {SET_MESSAGE, CLEAR_MESSAAGE} from './type.js';
+import {SET_MESSAGE, CLEAR_MESSAGE} from './types';
 export const setMessage = (message) => ({
-    type: setMessage,
+    type: SET_MESSAGE,
     payload: message,
 });
 export const clearMessage = () => ({
-    type: CLEAR_MESSAAGE,
+    type: CLEAR_MESSAGE,
 });

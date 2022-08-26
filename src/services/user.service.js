@@ -6,9 +6,14 @@ const API_URL = "http://localhost:8080/api/test/";
 const getPublicContent = () => {
     return axios.get(API_URL + "all");
 }
-
 const getUserBoard = () => {
     return axios.get(API_URL + 'user', { headers: authHeader() })
 }
+const getmModeratorBoard = () => {
+    return axios.get(API_URL + "mod", { headers:authHeader() } )
+}
+const getAdminBoard = () => {
+    return axios.get(API_URL + "admin", { headers:authHeader() } )
+}
 
-export default {getPublicContent, getUserBoard};
+export default {getPublicContent, getUserBoard, getmModeratorBoard, getAdminBoard};
